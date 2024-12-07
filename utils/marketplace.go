@@ -13,7 +13,7 @@ var (
 	duration = 20 * time.Microsecond
 )
 
-func ListItems(browser *rod.Browser, page *rod.Page, phones []item) error {
+func ListItemsInMarketplace(browser *rod.Browser, page *rod.Page, phones []item) error {
 	defer browser.MustClose()
 
 	itemsProccessed := 0

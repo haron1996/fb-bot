@@ -72,12 +72,16 @@ func runEvery30Seconds() {
 			items[i], items[j] = items[j], items[i]
 		})
 
-		if err := utils.ListItems(browser, page, items); err != nil {
+		if err := utils.ListItemsInMarketplace(browser, page, items); err != nil {
 			fmt.Println(err)
 			return
 		}
 
-		utils.PostToGroups(browser, page, items)
+		// OTHER OPTIONS
+
+		// utils.ListInMorePlaces(browser, page)
+		// utils.PostToGroups(browser, page, items)
+		// utils.LeaveGroups(browser, page)
 
 		fmt.Println("All Phones Have Been Listed")
 
